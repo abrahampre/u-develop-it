@@ -173,7 +173,7 @@ app.get('/api/candidates', (req, res) => {
     });
   });
   
-  Get all parties
+  // Get all parties
   app.get('/api/parties', (req, res) => {
     const sql = `SELECT * FROM parties`;
     db.query(sql, (err, rows) => {
@@ -188,7 +188,7 @@ app.get('/api/candidates', (req, res) => {
     });
   });
   
-  Get single party
+  // Get single party
   app.get('/api/party/:id', (req, res) => {
     const sql = `SELECT * FROM parties WHERE id = ?`;
     const params = [req.params.id];
@@ -205,7 +205,7 @@ app.get('/api/candidates', (req, res) => {
     });
   });
   
-  Delete a party
+  // Delete a party
   app.delete('/api/party/:id', (req, res) => {
     const sql = `DELETE FROM parties WHERE id = ?`;
     const params = [req.params.id];
