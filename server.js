@@ -40,9 +40,41 @@ const db = mysql.createConnection(
 
 
 // Let's query the database to test the connection. I
-db.query('SELECT * FROM candidates',(err, rows)=>{
-    console.log(rows);
-})
+// db.query('SELECT * FROM candidates',(err, rows)=>{
+//     console.log(rows);
+// })
+// //single candidate
+// db.query('SELECT * FROM candidates WHERE id= 1',(err,row) => {
+//     if (err){
+//         console.log(err)
+//     }
+//     console.log(row)
+// })
+//delete candidate
+// db.query('DELETE FROM candidates WHERE id=?',1,(err,result)=>{
+//     if(err){
+//         console.log(err);
+//     }
+//     console.log(result);
+// })
+
+// Create a candidate
+
+const sql = `INSERT INTO candidates(id, first_name, last_name, industry_connected)
+             VALUES (?,?,?,?)`;
+const params = [1, 'Ronald','Firbank',1];
+
+db.query(sql,params,(err,result)=>{
+    if(err){
+        console.log(err);
+    }
+    console.log(result);
+});
+
+
+
+
+
 
 
 //default response for any othe rrequest (not found)
