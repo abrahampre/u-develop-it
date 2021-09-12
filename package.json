@@ -1,27 +1,18 @@
 {
-  "name": "u-develop-it",
+  "name": "db",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jest": "^27.1.1",
-    "mysql2": "^2.3.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "jest",
-    "start": "node server.js"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abrahampre/u-develop-it.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abrahampre/u-develop-it/issues"
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0"
   },
-  "homepage": "https://github.com/abrahampre/u-develop-it#readme"
+  "devDependencies": {
+    "jest": "^27.1.1"
+  }
 }

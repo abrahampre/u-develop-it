@@ -63,8 +63,8 @@ app.get('/api/candidates', (req, res) => {
         data: rows
       });
     });
-  });
-  
+});
+
   // Get single candidate with party affiliation
   app.get('/api/candidate/:id', (req, res) => {
     const sql = `SELECT candidates.*, parties.name 
@@ -86,7 +86,7 @@ app.get('/api/candidates', (req, res) => {
       });
     });
   });
-  
+
   // Create a candidate
   app.post('/api/candidate', ({ body }, res) => {
     // Candidate is allowed not to be affiliated with a party
@@ -151,6 +151,9 @@ app.get('/api/candidates', (req, res) => {
       }
     });
   });
+
+
+
   
   // Delete a candidate
   app.delete('/api/candidate/:id', (req, res) => {
@@ -227,6 +230,9 @@ app.get('/api/candidates', (req, res) => {
       }
     });
   });
+
+  
+
   
   // Not Found response for unmatched routes
   app.use((req, res) => {
